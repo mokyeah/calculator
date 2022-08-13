@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.calculator-shadow {
+    border-radius: 0px;
+    background: linear-gradient(145deg, #78e4e6, #8effff);
+    box-shadow:  17px 17px 34px #84fafc,
+                 -17px -17px 34px #86ffff;
+}
+.input-shadow {
+    border-radius: 14px;
+background: linear-gradient(145deg, #67d4d6, #7afdff);
+box-shadow:  38px 38px 76px #54afb0,
+             -38px -38px 76px #90ffff;
+}
+.key-shadow {
+    border-radius: 14px;
+background: linear-gradient(145deg, #64ced0, #77f5f7);
+box-shadow:  38px 38px 76px #52a9ab,
+             -38px -38px 76px #8cffff;
+}
