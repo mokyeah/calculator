@@ -16,7 +16,7 @@ function App() {
       <div className="absolute -bottom-20 text-xl p-10 hidden-md: hidden">Don't ask why am I here. It's an easter egg so don't deduct my mark</div></div>
       <div className="grid gap-4 grid-cols-4 text-2xl mt-10">
         
-            <div onClick={() => setepression("3.141592")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center">π</div>
+            <div onClick={() => setepression(expression + "3.141592")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center">π</div>
             <div onClick={() => setepression("Area of circle: A=πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center">⚪</div>
             <div onClick={() => setepression("Area cylinder: A=2πrh+2πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center">🛢️</div>
            </div>
