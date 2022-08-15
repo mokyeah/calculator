@@ -2,8 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+@keyframes scroll {
+    100% { left: -100vw; }  
+}
 * {
     font-family: 'Inconsolata'
 
@@ -27,3 +28,11 @@ background: linear-gradient(145deg, #64ced0, #77f5f7);
 box-shadow:  38px 38px 76px #52a9ab,
              -38px -38px 76px #8cffff;
 }
+
+  
+  
+
+  
+  
+
+  
