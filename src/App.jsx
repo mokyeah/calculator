@@ -28,9 +28,11 @@ pauseOnHover
         <div className='text-xl p-2 m-3 font-seimifold border-solid' ></div>
         <div className="calculator-shadow p-5 relative">
           <div className="flex flex-row gap-3 ">
-            <div className="flex justify-center items-center gap-20">
+            <div className="flex justify-center items-center gap-40">
               <div className="text-s">{moment(time).format("HH.mm")}</div>
-              <div className="text-s gap-4">calculator</div>
+              
+                <Icon icon="ant-design:line-outlined" width="40" height="40" />
+                
               <div className="flex flex-row items-center gap-3">
                 <Icon icon="ant-design:signal-filled" className="mt-1 " />
                 <Icon icon="akar-icons:wifi" className="mt-1 " />
@@ -64,9 +66,9 @@ pauseOnHover
                 if (e === '=') {
                   try {
                   setepression( eval((expression
-                    .replace("x","*")
-                    .replace("÷", "/")
-                    .replace("%", "/100")
+                    .replaceAll("x","*")
+                    .replaceAll("÷", "/")
+                    .replaceAll("%", "/100")
                     )))
                  } catch (error) {
                   if (error instanceof SyntaxError)
