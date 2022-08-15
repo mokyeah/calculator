@@ -9,10 +9,17 @@ function App() {
   const time = new Date()
   const [expression, setepression] = useState("0");
   return (
+    
     <div className='bg-cyan-200 flex justify-center items-center absolute w-full h-screen'>
+      
       <div ><Icon icon="icon-park-outline:bird" width="50" height="50" className="absolute -bottom-20 "/>
-      <div className="absolute -bottom-20 text-xl p-10">Don't ask why am I here. It's an easter egg so don't deduct my mark</div></div>
-
+      <div className="absolute -bottom-20 text-xl p-10 hidden-md: hidden">Don't ask why am I here. It's an easter egg so don't deduct my mark</div></div>
+      <div className="grid gap-4 grid-cols-4 text-2xl mt-10">
+        
+            <div onClick={() => setepression("3.141592653589793238462643383279502884197169399375105820974944592307816406286 208998628034825342117067982148086513282306647093844609550582231725359408128481 117450284102701938521105559644622948954930381964428810975665933446128475648233 786783165271201909145648566923460348610454326648213393607260249141273724587006 606315588174881520920962829254091715364367892590360011330530548820466521384146 951941511609433057270365759591953092186117381932611793105118548074462379962749 567351885752724891227938183011949129833673362440656643086021394946395224737190 702179860943702770539217176293176752384674818467669405132000568127145263560827 785771342757789609173637178721468440901224953430146549585371050792279689258923 542019956112129021960864034418159813629774771309960518707211349999998372978049 951059731732816096318595024459455346908302642522308253344685035261931188171010 003137838752886587533208381420617177669147303598253490428755468731159562863882 353787593751957781857780532171226806613001927876611195909216420198938095257201 065485863278865936153381827968230301952035301852968995773622599413891249721775 283479131515574857242454150695950829533116861727855889075098381754637464939319 255060400927701671139009848824012858361603563707660104710181942955596198946767 837449448255379774726847104047534646208046684259069491293313677028989152104752 162056966024058038150193511253382430035587640247496473263914199272604269922796 782354781636009341721641219924586315030286182974555706749838505494588586926995 690927210797509302955321165344987202755960236480665499119881834797753566369807")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center">π</div>
+            <div onClick={() => setepression("Area of circle: A=πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center">⚪</div>
+            <div onClick={() => setepression("Area cylinder: A=2πrh+2πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center">🛢️</div>
+           </div>
       <ToastContainer
 position="top-right"
 autoClose={5000}
@@ -26,9 +33,12 @@ pauseOnHover
 />
 {/* Same as */}
 <ToastContainer />
+
       <div className="rounded-md overflow-hidden z-[9999]">
-      <Icon icon="icon-park-outline:bird" width="50" height="50" className="absolute left-20  "/>
+      <Icon icon="icon-park-outline:bird" width="50" height="50" className="absolute left-20 "/>
       <Icon icon="icon-park-outline:bird" width="50" height="50" className="absolute right-20  "/>
+      <Icon icon="icon-park-outline:bird" width="40" height="40" vFlip={true} rotate={2} className="relative left-"/>
+    
 
         <div className='text-xl p-2 m-3 font-seimifold border-solid ' ></div>
         <div className="calculator-shadow p-5 relative">
@@ -36,7 +46,7 @@ pauseOnHover
             <div className="flex justify-center items-center gap-40 ">
               <div className="text-s">{moment(time).format("HH.mm")}</div>
               
-                <Icon icon="ant-design:line-outlined" width="40" height="40" className="-p-3"/>
+                <Icon icon="ant-design:line-outlined" width="40" height="40" />
                 
               <div className="flex flex-row items-center gap-3">
                 <Icon icon="ant-design:signal-filled" className="mt-1 " />
