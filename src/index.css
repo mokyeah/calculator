@@ -29,8 +29,11 @@ box-shadow:  38px 38px 76px #52a9ab,
              -38px -38px 76px #8cffff;
 }
 
-  
-  
+html {
+	zoom: 100%;
+}
+/*This can be used for any tag, id or class*/
+
 
   
   
