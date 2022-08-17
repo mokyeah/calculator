@@ -21,6 +21,7 @@ function App() {
             <div onClick={() => setepression("Area of circle: A=πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center animate_animated animate__slideInDown">⚪</div>
             <div onClick={() => setepression("Area cylinder: A=2πrh+2πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center animate_animated animate__slideInDown">🛢️</div>
            </div>
+           <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
       <ToastContainer
 position="top-right"
 autoClose={5000}
