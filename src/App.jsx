@@ -10,16 +10,16 @@ function App() {
   const [expression, setepression] = useState("0");
   return (
     
-    <div className='bg-cyan-200 flex justify-center items-center absolute w-full h-screen'>
+    <div className='bg-cyan-200 flex justify-center items-center absolute w-full h-screen '>
       
-      <div ><Icon icon="icon-park-outline:bird" width="50" height="50" className="absolute -bottom-20 "/>
-      <div className="  absolute -bottom-20 text-xl p-10">Don't ask why am I here. It's an easter egg so don't deduct my mark</div></div>
+      <div className="hidden md:absolute"><Icon icon="icon-park-outline:bird" width="50" height="50" className="absolute -bottom-20 "/>
+      <div className="hidden md:absolute -bottom-20 text-xl p-10">Don't ask why am I here. It's an easter egg so don't deduct my mark</div></div>
       
-      <div className="hidden md:grid gap-4 grid-cols-4 text-2xl mt-10">
+      <div className="hidden md:grid gap-4 grid-cols-4 text-2xl mt-10 animate_animated animate__slideInDown">
         
             
-            <div onClick={() => setepression("Area of circle: A=πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center ">⚪</div>
-            <div onClick={() => setepression("Area cylinder: A=2πrh+2πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center">🛢️</div>
+            <div onClick={() => setepression("Area of circle: A=πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center animate_animated animate__slideInDown">⚪</div>
+            <div onClick={() => setepression("Area cylinder: A=2πrh+2πr^2")} className="key-shadow w-full h-full aspect-square flex items-center p-3 justify-center animate_animated animate__slideInDown">🛢️</div>
            </div>
       <ToastContainer
 position="top-right"
@@ -34,16 +34,16 @@ pauseOnHover
 />
 {/* Same as */}
 <ToastContainer />
-
-      <div className="rounded-md overflow-hidden z-[9999]">
+<Icon icon="icon-park-outline:bird" width="50" height="50" className="absolute top-40 left-20 "/>
+      <div className="rounded-md overflow-hidden z-[9999] ">
       
-          <Icon icon="icon-park-outline:bird" width="50" height="50" className="absolute left-20 "/>
+          
          
         
       
 
         <div className='text-xl p-2 m-3 font-seimifold border-solid ' ></div>
-        <div className="calculator-shadow p-5 relative">
+        <div className="calculator-shadow p-5 relative animate__animated animate__zoomInDown">
           <div className="flex flex-row gap-3 ">
             <div className="flex justify-center items-center gap-40 ">
               <div className="text-s">{moment(time).format("HH.mm")}</div>
