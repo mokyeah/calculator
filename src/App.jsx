@@ -10,7 +10,7 @@ function App() {
   const [expression, setepression] = useState("0");
   return (
     
-    <div className='bg-cyan-200 flex justify-center items-center absolute w-full h-screen '>
+    <div className='bg-zinc-800 flex text-stone-50 border-stone-50 justify-center items-center absolute w-full h-screen '>
       
       <div className="hidden md:absolute"><Icon icon="icon-park-outline:bird" width="50" height="50" className="absolute -bottom-20 "/>
       <div className="hidden md:absolute -bottom-20 text-xl p-10">Don't ask why am I here. It's an easter egg so don't deduct my mark</div></div>
@@ -47,7 +47,7 @@ pauseOnHover
         <div className="calculator-shadow p-5 relative animate__animated animate__zoomInDown">
           <div className="flex flex-row gap-3 ">
             <div className="flex justify-center items-center gap-40 ">
-              <div className="text-s">{moment(time).format("HH.mm")}</div>
+              <div className="text-s" >{moment(time).format("HH.mm")}</div>
               
                 <Icon icon="ant-design:line-outlined" width="40" height="40" />
                 
@@ -66,21 +66,21 @@ pauseOnHover
           <div className=" ">
             <input value={expression}
               disabled
-              className="w-full text-right input-shadow text-3xl mt-8 p-7
+              className="w-full text-right input-shadow outline text-3xl mt-8 p-7
             "/>
           </div>
        
-          <div className="grid gap-4 grid-cols-4 text-2xl mt-10">
-            <div  onClick={() => setepression("0")} className="key-shadow w-full h-full aspect-square flex items-center justify-center">AC</div>
+          <div className="grid gap-4 grid-cols-4 text-2xl mt-10 ">
+            <div  onClick={() => setepression("0")} className="key-shadow w-full h-full aspect-square flex items-center justify-center outline hover:outline-2">AC</div>
 
 
-            <button onClick={() => setepression(expression.slice(0, -1) || "0")} className="key-shadow w-full h-full aspect-square flex items-center justify-center">
+            <button onClick={() => setepression(expression.slice(0, -1) || "0")} className="key-shadow w-full h-full aspect-square flex items-center justify-center outline hover:outline-2">
               <Icon icon="akar-icons:backspace-fill" />
             </button>
-            <button onClick={() => setepression(expression + "%")} className="key-shadow w-full h-full aspect-square flex items-center justify-center font-bold">
+            <button onClick={() => setepression(expression + "%")} className="key-shadow w-full h-full aspect-square flex items-center justify-center font-bold outline hover:outline-2">
               %
             </button>  
-            <button onClick={() => setepression(expression + "÷")} className="key-shadow w-full h-full aspect-square flex items-center justify-center">
+            <button onClick={() => setepression(expression + "÷")} className="key-shadow w-full h-full aspect-square flex items-center justify-center outline hover:outline-2">
               <Icon icon="fa-solid:divide" />
             </button>
 
@@ -105,7 +105,7 @@ pauseOnHover
                 else { setepression((expression == "0" ? "" : expression) + e) }
               }}
 
-                className={`key-shadow w-full h-full aspect-square flex items-center justify-center ${e == "=" && 'row-span-2'}`}>{e}</button>
+                className={`key-shadow w-full h-full aspect-square flex items-center justify-center outline hover:outline-2 ${e == "=" && 'row-span-2'}`}>{e}</button>
 
             ))}
 
@@ -129,7 +129,7 @@ pauseOnHover
       <div className="w-full absolute -bottom-0 ">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
-            fill="  #00FFFF"
+            fill="  #212121"
             fill-opacity="1"
             d="M0,320L34.3,277.3C68.6,235,137,149,206,122.7C274.3,96,343,128,411,165.3C480,203,549,245,617,250.7C685.7,256,754,224,823,202.7C891.4,181,960,171,1029,192C1097.1,213,1166,267,1234,282.7C1302.9,299,1371,277,1406,266.7L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
           />
